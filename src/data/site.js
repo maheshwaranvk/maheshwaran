@@ -90,7 +90,13 @@ export const expertise = [
   { key: "devops", title: "AI engineering & DevOps", text: "AI features shipped with production rigour: tested, automated, observable.", tags: ["Python", "Java", "CI/CD"] },
 ];
 
-// Projects: shown on the Projects page. `code` = GitHub repo, `live` = a link people can open.
+// Projects: shown on the Projects page.
+//   code = GitHub repo · live = a link people can open
+//   categories = the filter chips each project appears under (first one sets the card colour)
+//   icon = leaf | bolt | book | checklist | cursor | swap
+//   highlights = the four tiles on the dark panel
+export const projectCategories = ["Agents", "RAG & Evaluation", "Computer Vision", "Automation"];
+
 export const projects = [
   {
     tag: "Computer Vision · Multi-agent",
@@ -98,6 +104,14 @@ export const projects = [
     text: "A farmer snaps a paddy leaf; a vision model spots the disease and a team of 8 agents explains the remedy and prevention in simple Tamil, with guardrails on every step.",
     stack: ["PyTorch MobileNetV3", "Multi-agent", "GPT-4o", "FastAPI"],
     code: "https://github.com/maheshwaranvk/paddy-doctor",
+    categories: ["Computer Vision", "Agents"],
+    icon: "leaf",
+    highlights: [
+      { value: "10", label: "diseases & pests detected" },
+      { value: "85.4%", label: "validation accuracy" },
+      { value: "8", label: "agents with guardrails" },
+      { value: "தமிழ்", label: "answers by text or voice" },
+    ],
   },
   {
     tag: "Daily AI digest",
@@ -105,6 +119,14 @@ export const projects = [
     text: "A daily feed of AI news as short swipeable cards, with save-for-later and one-tap LinkedIn post drafts.",
     stack: ["Daily automation", "Summarisation"],
     live: "https://claude.ai/artifact/XsZW6M4U1cC6J49ACyqSmt",
+    categories: ["Automation"],
+    icon: "bolt",
+    highlights: [
+      { value: "Daily", label: "fresh AI news digest" },
+      { value: "Swipe", label: "short news cards" },
+      { value: "Save", label: "stories for later" },
+      { value: "1-tap", label: "LinkedIn post drafts" },
+    ],
   },
   {
     tag: "RAG · Evaluation",
@@ -112,6 +134,14 @@ export const projects = [
     text: "Generates exam-ready questions from textbooks and past papers, with an evaluation layer that checks faithfulness and hallucination.",
     stack: ["FastAPI", "Hybrid RAG", "MongoDB", "React"],
     code: "https://github.com/maheshwaranvk/ExamSmith",
+    categories: ["RAG & Evaluation"],
+    icon: "book",
+    highlights: [
+      { value: "6", label: "evaluation checks per output" },
+      { value: "Hybrid", label: "BM25 + vector retrieval" },
+      { value: "JSON", label: "schema-validated questions" },
+      { value: "3", label: "user roles, JWT secured" },
+    ],
   },
   {
     tag: "Hybrid RAG · Test generation",
@@ -119,6 +149,14 @@ export const projects = [
     text: "Turns user stories into test cases, grounded in similar past cases found with hybrid search and reranking.",
     stack: ["MongoDB Vector Search", "BM25", "Mistral", "Groq"],
     code: "https://github.com/maheshwaranvk/userStory-to-testCase",
+    categories: ["RAG & Evaluation"],
+    icon: "checklist",
+    highlights: [
+      { value: "Hybrid", label: "BM25 + vector search" },
+      { value: "Rerank", label: "results scored with Groq" },
+      { value: "1024", label: "dimension Mistral embeddings" },
+      { value: "XLSX", label: "bulk import from Excel" },
+    ],
   },
   {
     tag: "Agents · MCP",
@@ -126,6 +164,14 @@ export const projects = [
     text: "Write a test in plain Gherkin; an AI agent runs it in the browser and generates readable Playwright code.",
     stack: ["Playwright", "MCP", "TypeScript"],
     code: "https://github.com/maheshwaranvk/noCodeAutomationToolUsingPlaywright",
+    categories: ["Agents", "Automation"],
+    icon: "cursor",
+    highlights: [
+      { value: "Gherkin", label: "tests in plain English" },
+      { value: "MCP", label: "agent drives the browser" },
+      { value: "Code", label: "readable Playwright generated" },
+      { value: "2", label: "ways to run: CLI or REST API" },
+    ],
   },
   {
     tag: "LLM code migration",
@@ -133,6 +179,14 @@ export const projects = [
     text: "Java pipeline where an LLM rewrites existing Selenium tests as Playwright and drops them into the suite.",
     stack: ["Java", "Groq", "DeepSeek R1"],
     code: "https://github.com/maheshwaranvk/GenAISeleniumToPlaywright",
+    categories: ["Automation"],
+    icon: "swap",
+    highlights: [
+      { value: "Selenium", label: "existing tests in" },
+      { value: "Playwright", label: "converted tests out" },
+      { value: "R1", label: "DeepSeek via Groq" },
+      { value: "Java", label: "pipeline into the suite" },
+    ],
   },
 ];
 
