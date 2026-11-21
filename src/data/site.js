@@ -93,11 +93,18 @@ export const expertise = [
 // Projects: shown on the Projects page. `code` = GitHub repo, `live` = a link people can open.
 export const projects = [
   {
-    tag: "Hybrid RAG · Test generation",
-    title: "TestGenie",
-    text: "Turns user stories into test cases, grounded in similar past cases found with hybrid search and reranking.",
-    stack: ["MongoDB Vector Search", "BM25", "Mistral", "Groq"],
-    code: "https://github.com/maheshwaranvk/userStory-to-testCase",
+    tag: "Computer Vision · Multi-agent",
+    title: "Paddy Doctor",
+    text: "A farmer snaps a paddy leaf; a vision model spots the disease and a team of 8 agents explains the remedy and prevention in simple Tamil, with guardrails on every step.",
+    stack: ["PyTorch MobileNetV3", "Multi-agent", "GPT-4o", "FastAPI"],
+    code: "https://github.com/maheshwaranvk/paddy-doctor",
+  },
+  {
+    tag: "Daily AI digest",
+    title: "Tech Shorts",
+    text: "A daily feed of AI news as short swipeable cards, with save-for-later and one-tap LinkedIn post drafts.",
+    stack: ["Daily automation", "Summarisation"],
+    live: "https://claude.ai/artifact/XsZW6M4U1cC6J49ACyqSmt",
   },
   {
     tag: "RAG · Evaluation",
@@ -105,6 +112,13 @@ export const projects = [
     text: "Generates exam-ready questions from textbooks and past papers, with an evaluation layer that checks faithfulness and hallucination.",
     stack: ["FastAPI", "Hybrid RAG", "MongoDB", "React"],
     code: "https://github.com/maheshwaranvk/ExamSmith",
+  },
+  {
+    tag: "Hybrid RAG · Test generation",
+    title: "TestGenie",
+    text: "Turns user stories into test cases, grounded in similar past cases found with hybrid search and reranking.",
+    stack: ["MongoDB Vector Search", "BM25", "Mistral", "Groq"],
+    code: "https://github.com/maheshwaranvk/userStory-to-testCase",
   },
   {
     tag: "Agents · MCP",
@@ -119,13 +133,6 @@ export const projects = [
     text: "Java pipeline where an LLM rewrites existing Selenium tests as Playwright and drops them into the suite.",
     stack: ["Java", "Groq", "DeepSeek R1"],
     code: "https://github.com/maheshwaranvk/GenAISeleniumToPlaywright",
-  },
-  {
-    tag: "Daily AI digest",
-    title: "Tech Shorts",
-    text: "A daily feed of AI news as short swipeable cards, with save-for-later and one-tap LinkedIn post drafts.",
-    stack: ["Daily automation", "Summarisation"],
-    live: "https://claude.ai/artifact/XsZW6M4U1cC6J49ACyqSmt",
   },
 ];
 

@@ -20,7 +20,7 @@ export default function Projects() {
           <div className="eyebrow">Projects</div>
           <SplitHeadline text="Things I've built that" accent="run in production." />
           <motion.p className="lead" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}>
-            AI systems I designed and shipped: retrieval, agents, evaluation and automation. The code is open on GitHub.
+            AI systems I designed and built to production, enterprise-grade standards: retrieval, agents, evaluation, guardrails and automation. The code is open on GitHub.
           </motion.p>
         </div>
       </section>
@@ -33,7 +33,6 @@ export default function Projects() {
                 <div className="proj-top">
                   <span className="proj-idx">{String(i + 1).padStart(2, "0")}</span>
                   <span className="proj-tag">{p.tag}</span>
-                  <span className="proj-live" title="In production"><i />Live</span>
                 </div>
                 <h3>{p.title}</h3>
                 <p>{p.text}</p>
